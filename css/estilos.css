@@ -599,3 +599,13 @@ background-color: rgb(9, 255, 0);
 
     }
 }
+
+.libreria{
+    animation-delay: 1s;
+}
+
+.item:hover{
+    transition:1s;
+    transform:scale(1.2);
+    transition-delay: 0.5s;
+}
