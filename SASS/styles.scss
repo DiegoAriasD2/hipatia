@@ -3,8 +3,7 @@
 
 @import "variables";
 @import "colores";
-
-@import url('https://fonts.googleapis.com/css2? family= Roboto:wght@100;400 & display=swap');
+@import "tipografias";
 
 
 
@@ -20,7 +19,7 @@ body {
 
 @media screen and (min-width: 768px) {
     body {
-        background-color: rgb(104, 87, 65);
+        background-color: $verdeUno;
     }
 }
 
@@ -31,24 +30,14 @@ body {
 
 }
 
-#suscribete {
-    font-family: Arial, Helvetica, sans-serif;
-    letter-spacing: 1em;
-    font-size: large;
-    font-weight: 600;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    text-decoration: wavy;
-    background: rgb(40, 100, 90);
-    padding: 1em;
-}
+
 
 .titulo2 {
     width: 100%;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
     text-align: center;
-    color: rgb(50, 100, 90);
+    color: $verdeDos;
     text-decoration: wavy;
     background: rgb(136, 182, 136);
     padding: 1em;
@@ -56,10 +45,10 @@ body {
 
 
 h1 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: $fontTitle2;
     font-style: italic;
     font-weight: bold;
-    color: rgb(19, 53, 19);
+    color: $verdeDos;
     text-align: center;
     letter-spacing: 0.8em;
     padding: 1%;
@@ -75,7 +64,7 @@ h1 {
 
 h2 {
     width: 100%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: $fontTitle;
     letter-spacing: 0em;
     font-style: italic;
     font-weight: bold;
@@ -84,6 +73,22 @@ h2 {
     padding: 1%;
     background-color: rgb(40, 100, 90);
     background-size: 100%;
+
+    @media (max-width: 992px) {
+        font-size: 50%;
+    }
+
+}
+
+.medText {
+    font-family: $fontTitle2;
+    @media (max-width: 992px) {
+        font-size: 2rem;
+    }
+
+    @media (max-width: 768) {
+        font-size: 80%;
+    }
 
 }
 
@@ -122,13 +127,18 @@ a {
 }
 
 .centrarFoto {
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 1%;
-    background-color: rgb(75, 109, 75);
+    padding: 0%;
+    background-color: $verdeDos;
 }
 
+.fotoUS {
+    display: flex;
+    justify-content: space-around;
+}
 
 .fotoPortada {
     width: 60%;
@@ -239,27 +249,27 @@ form {
 }
 
 #sobreNosotros {
-    font-family: cursive;
-    font-size: 1em;
+    font-family: 'Indie Flower', cursive;
+    font-size: 100%;
     color: rgb(156, 54, 110);
     background-image: url(https://i.pinimg.com/564x/a9/90/35/a990353567bdded82fdfe21e9bfa9980.jpg);
     /* background-image: url(https://i.pinimg.com/564x/82/6f/bb/826fbb156f9b7299758e03b442703167.jpg) ; */
     background-position: center center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+    // background-attachment: fixed;
+    // background-size: cover;
     ;
     /* background-color: rgb(149, 241, 214); */
 }
 
 p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1em;
-    color: rgb(25, 71, 56);
+    font-size: 0.2em;
+    color: $textoVerdeSuave;
     padding: 1%;
     text-align: center;
     letter-spacing: 0.5em;
-    background-color: rgb(190, 231, 231);
+    background-color: $fondoVerdeUno;
 }
 
 p1 {
@@ -274,9 +284,9 @@ p1 {
 
 .sobreNos {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: rgb(40, 100, 90);
+    color: $textoVerdeSuave;
     letter-spacing: normal;
-    font-size: 1.8em;
+    font-size: 1.0rem;
 }
 
 .section {
@@ -295,7 +305,7 @@ body {
 }
 
 h1 {
-    color: rgb(15, 94, 28);
+    color: $textoVerdeSuave;
 }
 
 #fondo {
@@ -353,6 +363,19 @@ ol {
 }
 
 p {
+    font-style: italic;
+    text-align: center;
+    font-size: 200%;
+
+    @media(max-width: 992px) {
+        font-size: 100%;
+    }
+
+}
+
+
+pUs {
+    color: $textoVerdeSuave;
     font-style: italic;
     text-align: center;
     font-size: 200%;
@@ -423,21 +446,30 @@ p {
     /* display: flex; */
 
 }
-
+.suscribete{
+    font-family: $fontTitle2;
+}
 .flex-container {
     width: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    background-color: rgb(95, 109, 99);
+    background-color: $fondoVerdeUno;
+
+    @media screen and (max-width:1024) {
+        display: flex;
+        flex-direction: column;
+    }
+        
+ 
+      
+    
 }
 
 .inicio {
     width: 100%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center;
+    display: flex;
+    justify-content: space-around;
 }
 
 
@@ -608,12 +640,14 @@ p {
     }
 }
 
+
+
 .libreria {
     animation-delay: 1s;
 }
 
 .item:hover {
-    transition: 1s;
-    transform: scale(1.2);
-    transition-delay: 0.5s;
+    transition: 0.8s;
+    transform: scale(1.05);
+    transition-delay: 0.1s;
 }
