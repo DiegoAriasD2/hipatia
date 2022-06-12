@@ -4,6 +4,7 @@
 @import "variables";
 @import "colores";
 @import "tipografias";
+@import "mixins";
 
 
 
@@ -450,10 +451,7 @@ pUs {
     font-family: $fontTitle2;
 }
 .flex-container {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    @include fle
     background-color: $fondoVerdeUno;
 
     @media screen and (max-width:1024) {
@@ -637,9 +635,8 @@ pUs {
         grid-gap: 2rem;
         background-color: rgb(214, 137, 198);
 
-    }
-}
-
+    }    
+}    
 
 
 .libreria {
@@ -651,3 +648,5 @@ pUs {
     transform: scale(1.05);
     transition-delay: 0.1s;
 }
+
+

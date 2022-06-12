@@ -1,0 +1,19 @@
+
+@mixin fle {
+    width: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+}
+
+
+
+
+
+@mixin flexible($alinea-v,$alinea-h){
+display: flex;
+justify-content:$alinea-v ;
+align-items:$alinea-h ;
+
+}
