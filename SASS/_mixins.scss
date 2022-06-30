@@ -1,19 +1,13 @@
+@import "variables";
 
-@mixin fle {
-    width: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    
+@mixin medium {
+    @media(min-width: #{$medium}) {
+        @content;
+    }
 }
 
-
-
-
-
-@mixin flexible($alinea-v,$alinea-h){
-display: flex;
-justify-content:$alinea-v ;
-align-items:$alinea-h ;
-
+@mixin large {
+    @media(min-width: #{$large}) {
+        @content;
+    }
 }

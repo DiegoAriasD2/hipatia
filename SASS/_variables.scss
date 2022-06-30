@@ -1,4 +1,14 @@
-$padding: 15px;
-$radius: 15px;
-$shadow: 0 10px 30px;
-$desktop: 992px;
+@import "colors";
+
+$padding: 10px;
+$radius: 8px;
+$shadow: 0 10px 30px $colorOscuro(0, 0, 0, .4);
+$medium: 992px;
+$widht: 100%;
+$small: 768px;
+$large: 1024px;
+$desktop:1200px;
+$colors:(verdeUno: $verdeUno, verdeDos: $verdeDos, textoVerdeSuave: ligthen($verdeUno,40%), fondoVerdeUno: $fondoVerdeUno, colorOscuro: $colorOscuro);
+
+$breakpoint:(small: $small, medium: $medium, large: $large, desktop: $desktop);
+
